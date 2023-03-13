@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>Quiz App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container" id="blur">
+
+    <h1 class="text-danger fw-bolder d-flex justify-content-center mt-4">Football Quiz</h1>
+
+    <div class="container mt-5">
+    <div class="d-flex mt-1 justify-content-between">
+        <div class="number-of-count mb-3" id="quesIndex"> 
+            <span class="number-of-question fw-bolder" id="number-of-question">1 of 8 questions</span>
+        </div>      
+    </div>
+    <div id="question-container" class="hide question-container">
+
+      <div id="question" class="fs-5 fw-bolder d-flex justify-content-center align-items-center mb-5 border-top pt-4 fs-3">Question</div>
+
+      <div id="answer-buttons" class="mt-5">
+        <button class="py-3 px-5 my-2 mx-5 form-control" onclick="selectAnswer(event)"></button>
+        <button class="py-3 px-5 my-2 mx-5 form-control" onclick="selectAnswer(event)"></button>
+        <button class="py-3 px-5 my-2 mx-5 form-control" onclick="selectAnswer(event)"></button>
+        <button class="py-3 px-5 my-2 mx-5 form-control" onclick="selectAnswer(event)"></button>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <button id="start-btn" class="border-1 py-2 px-5 fs-4 rounded-pill">Start</button>
+    </div>
+
+    <div class="controls d-flex justify-content-end">
+      <button id="next-btn" class="next-btn btn fs-5 text-bg-dark" onclick="incrNum(); disable()">Next</button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button id="submitBtn" class="text-bg-success rounded px-4 py-2 fs-5" onclick="modalDisplay()">Submit</button>
+  </div>
+
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-center">
+          <h5 class="modal-title">Congratulations !!!!</h5>
+        </div>
+        <div class="modal-body">
+          <p class="modalText text-center" id="modalText"></p>
+        </div>
+        <p class="text-bg-dark text-center">Refresh the page to play again</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
